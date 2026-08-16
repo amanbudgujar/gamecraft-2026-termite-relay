@@ -20,18 +20,15 @@ const NAME_BOX = { x: 315, y: 430, w: 650, h: 64 };
 
 const WIDTH = 1280;
 const HEIGHT = 720;
-// Touch/phone devices display the canvas much smaller than its authored
-// 1920x1080 backing store, so that big a buffer just wastes GPU fill every
-// frame and tanks the frame rate. Render into a 1280x720 buffer there (scaled
-// up by CSS) — ~56% fewer pixels per frame — while desktops keep full detail.
-// This must run before RENDER_SCALE is derived from canvas.width.
+// The canvas backing store is authored at exactly WIDTH x HEIGHT (see the
+// <canvas> width/height attributes). Its container never displays it wider
+// than ~1280 CSS px, so a larger buffer (it used to be 1920x1080) was just
+// downscaled every frame — wasting ~56% of the GPU fill and dropping some
+// machines/browsers to a vsync-locked 30fps. Rendering ~1:1 with the display
+// keeps it both crisp and smooth. RENDER_SCALE is therefore 1.
 const isTouchDevice =
   typeof window !== "undefined" &&
   ("ontouchstart" in window || (navigator.maxTouchPoints || 0) > 0);
-if (isTouchDevice) {
-  canvas.width = WIDTH;
-  canvas.height = HEIGHT;
-}
 const RENDER_SCALE = canvas.width / WIDTH;
 const LEVEL_DURATION = 60;
 const PINE_TIME_BONUS = 5;
@@ -2893,10 +2890,14 @@ function drawHud() {
   drawText(`${remaining.toFixed(1)}s`, WIDTH - 65, 62, 34, timerColor, "right");
   // Always-visible live score readout. The pod icons above show collection
   // progress; this is the actual point total (frozen the moment the timer
-  // hits zero), required to be visible throughout play.
+  // hits zero), required to be visible throughout play. In Full Relay it shows
+  // the running total across levels (banked levels + this level so far); in
+  // Level Run it shows just this level's score.
+  const campaignRun = gameMode === GAME_MODES.CAMPAIGN;
+  const displayScore = campaignRun ? campaignScore + score : score;
   drawRoundedRect(34, 112, 168, 38, 12, "rgba(20, 68, 65, 0.78)", "#f4cf6a");
-  drawText("SCORE", 48, 131, 15, "#ffe9a8", "left");
-  drawText(String(score), 188, 131, 22, "#fff6b5", "right");
+  drawText(campaignRun ? "TOTAL" : "SCORE", 48, 131, 15, "#ffe9a8", "left");
+  drawText(String(displayScore), 188, 131, 22, "#fff6b5", "right");
   if (Math.abs(player.x - (mailbox.x + mailbox.width / 2)) > 260) {
     const direction = mailbox.x + mailbox.width / 2 < player.x ? "<" : ">";
     const distance = Math.ceil(Math.abs(player.x - (mailbox.x + mailbox.width / 2)) / 10) * 10;

@@ -1,169 +1,101 @@
 # Termite Relay
 
-A browser-based 2D platformer built for **UST GameCraft 2026**. You play a termite
-courier: collect pods across a side-scrolling level, carry them back to the colony
-nest, and bank enough of them before the 60-second timer runs out.
+A browser-based 2D platformer for **UST GameCraft 2026**. Play a termite courier:
+collect pods across a level, carry them to the colony nest, and bank enough before the
+60-second timer runs out.
 
-> **⚠️ CONFIRM before submitting:** items marked `⚠️ CONFIRM` below must be filled in
-> or verified by the participant. Do not submit with placeholder text.
+## Participant
 
----
+- **Name:** Aman Budgujar
+- **Team:** Solo entry (no team)
+- **Outside help:** None
 
-## Participant / Team
+## Description
 
-| Field | Value |
-|-------|-------|
-| Participant or team name | Aman Budgujar |
-| Team members | Solo entry (no team) |
-| Outside development support | None |
+A single-player, keyboard/touch collection-platformer with five levels. Each level is a
+self-contained **60-second** round: gather pods (two at a time), return them to the nest
+to bank points, and deliver at least the level's minimum before time runs out. Later
+levels add hazards — beetles and wasps, sticky sap, falling stalactites, crosswinds,
+slippery ash, a dark chamber with a light switch, teleport portals and swaying leaf
+platforms.
 
----
+Two modes:
 
-## Brief description
-
-Termite Relay is a single-player, keyboard-controlled collection/platformer game.
-Each of its five levels is a self-contained **60-second** round: gather pods (two at a
-time), return them to the nest to bank points, and deliver at least the level's
-minimum before time expires. Levels layer in new hazards — patrolling beetles and
-wasps, sticky sap, falling stalactites, crosswinds, slippery ash, a pitch-dark
-chamber with a findable light switch, teleport portals and swaying leaf platforms.
-
-Two modes are available:
-
-- **Level Run** — practise any single level on its own. No leaderboard entry.
-- **Full Relay** — play all five levels back-to-back. Miss a level's pod minimum and
-  the relay restarts from Level 1. Completed relays are recorded on a local Top-10
-  leaderboard, viewable any time from the **Leaderboard** button on the mode-select
-  menu (and shown again on the Full Relay result screen).
-
----
+- **Level Run** — play a single level. No leaderboard entry.
+- **Full Relay** — all five levels back-to-back; miss a level's pod minimum and it
+  restarts from Level 1. Completed relays are saved to a local Top-10 leaderboard,
+  viewable from the menu's **Leaderboard** button and on the result screen.
 
 ## Objective and rules
 
-- Collect **pods** and deliver them to the **colony nest** to bank points.
-- You can carry **2 pods at once** (a one-time capacity boost in Level 5 raises this
-  to 3 for the rest of that run).
-- Each level has a **pod-delivery minimum** (6–10 depending on the level). Meet or
-  beat it before the timer hits zero to clear the level.
-- The **60-second countdown** starts only when you press Start, stays visible the
-  whole round, and the game **stops automatically at 0** — input after that cannot
-  change your score.
-- Contact with a beetle or wasp, or a falling stalactite, **stuns** you for ~2
-  seconds (followed by ~1 second of recovery immunity). It costs you time, not points.
-- **Pines** (an optional pickup, at most 2 per level, and only on Levels 2–5) each add
-  **+5 seconds** to that round's timer. They are entirely optional and score nothing —
-  see "Timer behaviour" below.
-
----
+- Deliver **pods** to the **nest** to score. You carry **2 at a time** (a Level 5
+  pickup raises this to 3 for that run).
+- Each level has a **pod-delivery minimum** (6–10). Meet it before the timer hits 0 to
+  clear the level.
+- The **60-second countdown** starts on Start, stays visible, and the game **stops at 0**
+  — input after that can't change the score.
+- Touching a beetle/wasp or a falling stalactite **stuns** you (~2s). It costs time, not
+  points.
+- **Pines** (optional, max 2 per level, Levels 2–5) each add **+5s** to the timer and
+  score nothing — an optional detour. Level 1 has none.
 
 ## How to play
 
-1. Enter your name on the welcome screen and press **Start / Enter**.
-2. Choose **Full Relay** or **Level Run**.
-3. Read the level instructions, then start the level.
-4. Move to pods to pick them up; carry up to two; walk into the nest to bank them.
-5. Bank the required number of pods before the timer reaches zero.
-6. At 0 seconds the result screen shows your name, final score and completion status,
-   with **Replay** and **Menu** options.
-
----
+1. Enter your name and press **Start / Enter**.
+2. Choose **Full Relay** or **Level Run**, then start the level.
+3. Walk into pods to pick them up (up to two), then into the nest to bank them.
+4. Bank the required pods before time runs out. At 0s the result screen shows your name,
+   score and status, with **Replay** and **Menu**.
 
 ## Controls
 
 | Action | Keys |
 |--------|------|
 | Move left / right | `A` / `D` or `←` / `→` |
-| Jump (hold for a higher jump) | `W` or `↑` |
+| Jump (hold for higher) | `W` or `↑` |
 | Confirm / Start / Replay | `Enter` |
-| End round / Back / Menu | `Esc` |
-| Menu, level, Start, Replay, Mute buttons | Mouse / touch **click** (pointer) |
+| Back / End round / Menu | `Esc` |
+| On-screen buttons | Mouse / touch tap |
 
-**Touch devices:** on-screen ◀ / ▶ / ▲ (jump) buttons appear automatically during
-gameplay on touch-capable devices, and tapping the name field on the welcome screen
-opens the device keyboard. All menus, level select and result buttons are tap-friendly.
-On desktop the on-screen buttons are hidden and play is fully keyboard-driven.
+On **touch devices**, on-screen ◀ ▶ ▲ controls appear during play, tapping the name
+field opens the keyboard, and a **⛶ fullscreen** button (recommended — locks to
+landscape) is available. On desktop, play is keyboard-driven.
 
-A **⛶ fullscreen button** (top-right, touch devices only) fills the screen and, where
-supported, locks to landscape — the recommended way to play on a phone. The canvas is
-also sized to fit the viewport height so the bottom controls are always reachable.
+## Scoring
 
----
-
-## Scoring rules
-
-- Scoring starts at **0** and is shown live in the HUD throughout the round.
-- Each standard pod unit is worth **10 points**; a heavy pod (Level 3) counts as two
-  units = **20 points**.
-- Points are **banked only when pods are delivered to the nest** — carried-but-not-yet-
-  delivered pods do not count.
-- Scoring is deterministic and based purely on your in-round actions. The score is
-  **frozen the instant the timer reaches zero** and cannot be edited through the UI.
-- In **Full Relay**, per-level scores and completion times sum into a relay total used
-  for the local leaderboard.
-
-### Timer behaviour (transparency note for judges)
-
-Every round's countdown **begins at 60 seconds** when Start is pressed, is visible for
-the whole round, shows a warning state in the final 10 seconds, and **stops at 0**.
-The optional **pine** pickups (max 2 per level, Levels 2–5 only) can each add +5
-seconds *if the player chooses to collect them* — they are an opt-in risk/reward
-detour, not a required part of the path, and they award no points. Level 1 has no
-pines and is therefore a strict 60-second round.
-
----
+- Starts at **0**, shown live in the HUD — Full Relay shows the running relay total;
+  Level Run shows the level score.
+- Each pod = **10 points**; a heavy pod (Level 3) = **20**. Points bank only on delivery
+  to the nest.
+- Deterministic and based on in-round actions; **frozen when the timer hits 0** and not
+  editable through the UI.
 
 ## Accessibility
 
-- **Keyboard-first:** full gameplay via keyboard; the canvas is focusable
-  (`tabindex`) with a visible focus ring.
-- **Screen-reader support:** the canvas has a descriptive `aria-label`, and an
-  `aria-live` status region announces score, pickups, warnings and results.
-- **Not colour-only:** state is conveyed with text/icons too (e.g. numeric SCORE,
-  the "HURRY!" text at 10s, stun stars, pod icons), not colour alone.
-- **Audio optional:** a Mute toggle is always visible and the game is fully playable
-  with sound off.
-- **Reduced motion:** when the OS "reduce motion" setting is on, decorative motion
-  (particle bursts, stun screen-shake, floating score popups, idle cloud drift) is
-  disabled while gameplay motion is preserved.
-- **Touch input:** on-screen controls and soft-keyboard name entry on touch devices.
+- Keyboard-first with a visible focus ring; canvas `aria-label` and an `aria-live`
+  status region announce score, pickups, warnings and results.
+- State is not colour-only (numeric score, "HURRY!" text, stun stars, pod icons).
+- Mute toggle; fully playable without sound. Honours the OS **reduce-motion** setting.
 
----
+## Technologies
 
-## Technologies used
-
-- **HTML5**, **CSS3**, **JavaScript (ES modules)** — no frameworks.
-- **Canvas 2D API** — all rendering (world, sprites, HUD, effects).
-- **Web Audio API** (`AudioContext`) — procedurally generated sound effects
-  (`js/soundManager.js`).
-- **HTML5 Audio** — looping background track.
-- **SVG** — image assets (characters, platforms, backgrounds, pods, pine).
-- **Browser `localStorage`** — the local Full Relay Top-10 leaderboard.
-
-No build step, bundler, server, backend or external network calls are required — the
-game runs directly from static files.
-
----
+HTML5, CSS3 and JavaScript (ES modules) — no frameworks or build step. Canvas 2D for
+rendering, Web Audio API for sound effects, an HTML5 Audio background loop, SVG art, and
+`localStorage` for the leaderboard. Runs from static files with no backend or network
+calls.
 
 ## AI tool used
 
-- **AI tools:** Microsoft Copilot and GitHub Copilot.
-- **Purpose:** AI assistance was used for concept discussion, level/collision design,
-  HTML/CSS/JavaScript generation, debugging, playtesting, SVG artwork generation and
-  documentation.
-- **Participant validation:** All AI-generated code and assets were reviewed, tested,
-  modified and validated by the participant. No confidential, client, employee or
-  personal information was entered into the AI tools. Generated code and dependencies
-  were checked for licensing, security and quality.
+- **Tools:** Microsoft Copilot and GitHub Copilot.
+- **Used for:** concept and level design, HTML/CSS/JS generation, debugging, playtesting,
+  SVG artwork and documentation.
+- **Validation:** all AI output was reviewed, tested and modified by the participant. No
+  confidential information was entered into the tools; code and assets were checked for
+  licensing and quality.
 
----
+## Launch
 
-## Launch instructions
-
-Because the game uses JavaScript ES modules, most browsers require it to be served
-over HTTP (opening `index.html` directly via `file://` will be blocked by module
-CORS rules).
-
-Run any static file server from the project folder, for example:
+The game uses ES modules, so serve it over HTTP (don't open `index.html` via `file://`):
 
 ```bash
 # Python 3
@@ -176,69 +108,37 @@ python3 -m http.server 8000
 npx serve .
 ```
 
-Then open the served URL in a supported browser and click the game canvas once (a user
-gesture is required before audio can start).
-
----
+Click the canvas once to enable audio.
 
 ## Browsers tested
 
-- **Google Chrome / Chromium (current) — verified.** Full playthrough of all five
-  levels and both modes with no console errors.
-- **Microsoft Edge — `⚠️ CONFIRM`.** Edge is Chromium-based and expected to behave
-  identically; please run a confirmation pass before submitting.
-
-Recommended display: desktop, landscape. The canvas has a fixed 1280×720 logical
-resolution and scales responsively to fit the window width.
-
----
+Verified on current **Google Chrome** and **Microsoft Edge** (both Chromium) with no
+console errors. Best on desktop, or a phone in landscape.
 
 ## Known limitations
 
-- **Best played in landscape on mobile.** In portrait the 16:9 canvas is small; use
-  the ⛶ fullscreen button (which also requests a landscape lock) for a full-size,
-  thumb-reachable layout. Button sizes are tuned for landscape.
-- **Mobile rendering resolution.** On touch devices the game renders into a 1280×720
-  buffer (instead of the desktop 1920×1080) and scales up via CSS, to keep the frame
-  rate smooth on phone GPUs. This is a deliberate quality/performance trade-off.
-- **Leaderboard is device-specific** — stored in this browser's `localStorage`
-  (`ust-gamecraft-2026-termite-courier-campaign-leaderboard-v1`). It is intentionally
-  **not** a centralized/shared leaderboard. A **Clear** button on the Full Relay
-  result screen wipes the local leaderboard (with a two-tap confirmation).
-- **Audio autoplay** may be blocked until the player interacts with the page; the game
-  is fully understandable with sound muted.
-
----
+- **Mobile:** best in landscape — use the ⛶ fullscreen button; portrait is small.
+- **Leaderboard** is local to the browser (`localStorage`), not shared/centralized; a
+  **Clear** button (two-tap confirm) wipes it.
+- **Audio** may not start until you interact with the page; the game is fine muted.
 
 ## Libraries and asset credits
 
-- **Third-party libraries:** None. No external JavaScript libraries are used.
-- **Font — "Lilita One"** (`assets/fonts/LilitaOne-Regular.ttf`): Google Fonts,
-  licensed under the **SIL Open Font License 1.1**.
-- **Image assets** (`assets/images/*.svg`): original SVG artwork generated with AI
-  assistance (Microsoft Copilot / GitHub Copilot) and reviewed by the participant.
-- **Background audio** (`assets/sounds/background-loop.wav`): by **DAN2008** on
-  Freesound — <https://freesound.org/people/DAN2008/sounds/860680/>. Released under
-  the **Creative Commons 0 (CC0 1.0) public-domain dedication**, so no attribution is
-  required; credit is given here voluntarily.
-- **Sound effects:** generated at runtime via the Web Audio API — no audio files.
-
----
+- **Third-party libraries:** none.
+- **Font:** "Lilita One" — Google Fonts, SIL Open Font License 1.1.
+- **Images:** original SVGs generated with AI (Copilot), reviewed by the participant.
+- **Background audio:** by DAN2008 on Freesound
+  (<https://freesound.org/people/DAN2008/sounds/860680/>), CC0 1.0 (public domain).
+- **Sound effects:** generated at runtime via Web Audio — no audio files.
 
 ## Project structure
 
 ```
-.
-├── index.html            # Entry point + canvas + accessibility labels + name-entry input
-├── css/
-│   └── styles.css         # Layout, canvas styling, focus indicator, helpers
-├── js/
-│   ├── main.js            # Game loop, levels, physics, scoring, HUD, input, screens
-│   ├── leaderboard.js     # Local Full Relay leaderboard: persistence + ranking
-│   └── soundManager.js    # Web Audio procedural sound effects
-├── assets/
-│   ├── fonts/             # Lilita One (OFL)
-│   ├── images/            # SVG sprites and backgrounds
-│   └── sounds/            # Background loop
-└── README.md
+index.html
+css/styles.css
+js/main.js          # game loop, levels, physics, scoring, HUD, input, screens
+js/leaderboard.js   # local leaderboard: persistence + ranking
+js/soundManager.js  # Web Audio sound effects
+assets/             # fonts, images, sounds
+README.md
 ```
