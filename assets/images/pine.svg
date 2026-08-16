@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Warm Golden Ambient Glow Filter -->
+    <filter id="pineGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur1" />
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Core Dark Wood Base Gradient -->
+    <radialGradient id="pineCoreGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#9e5c30" />
+      <stop offset="40%" stop-color="#693717" />
+      <stop offset="80%" stop-color="#3d1d0a" />
+      <stop offset="100%" stop-color="#1c0a03" />
+    </radialGradient>
+
+    <!-- Scale Front Shading Gradient -->
+    <linearGradient id="scaleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d48c48" />
+      <stop offset="50%" stop-color="#8a4d22" />
+      <stop offset="100%" stop-color="#4a230a" />
+    </linearGradient>
+
+    <!-- Scale Top Edge Highlight Gradient -->
+    <linearGradient id="scaleTipGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f2be80" />
+      <stop offset="50%" stop-color="#ffe4b5" />
+      <stop offset="100%" stop-color="#d48c48" />
+    </linearGradient>
+
+    <!-- Stem Gradient -->
+    <linearGradient id="pineStemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8c5828" />
+      <stop offset="50%" stop-color="#523112" />
+      <stop offset="100%" stop-color="#241203" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Outer Golden Glow -->
+  <ellipse cx="60" cy="65" rx="30" ry="40" fill="#ffaa00" opacity="0.38" filter="url(#pineGlow)" />
+
+  <!-- Top Wood Stem -->
+  <path d="M 55 26 C 57 16, 65 12, 73 8 C 70 16, 64 22, 59 28 Z" fill="url(#pineStemGrad)" stroke="#1a0a03" stroke-width="2" stroke-linejoin="round" />
+  <path d="M 58 24 Q 63 16 70 12" fill="none" stroke="#d48c48" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- Base Dark Oval Body Shadow -->
+  <ellipse cx="60" cy="65" rx="27" ry="37" fill="url(#pineCoreGrad)" stroke="#1a0a03" stroke-width="3" />
+
+  <!-- LAYERED PINE SCALES (Bottom to Top) -->
+
+  <!-- Row 1: Bottom Tip Scales -->
+  <path d="M 52 94 C 58 106, 62 106, 68 94 C 63 91, 57 91, 52 94 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 54 94 Q 60 102 66 94" fill="none" stroke="url(#scaleTipGrad)" stroke-width="1.8" stroke-linecap="round" />
+
+  <!-- Row 2: Lower Scales -->
+  <path d="M 37 80 C 42 93, 52 95, 55 82 C 47 78, 41 78, 37 80 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 39 80 Q 47 90 53 82" fill="none" stroke="url(#scaleTipGrad)" stroke-width="1.8" stroke-linecap="round" />
+
+  <path d="M 65 82 C 68 95, 78 93, 83 80 C 79 78, 73 78, 65 82 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 67 82 Q 73 90 81 80" fill="none" stroke="url(#scaleTipGrad)" stroke-width="1.8" stroke-linecap="round" />
+
+  <!-- Row 3: Mid-Lower Scales -->
+  <path d="M 32 66 C 36 78, 48 81, 52 68 C 43 64, 37 64, 32 66 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 34 66 Q 42 76 50 68" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <path d="M 52 69 C 56 83, 64 83, 68 69 C 62 65, 58 65, 52 69 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 54 69 Q 60 78 66 69" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <path d="M 68 68 C 72 81, 84 78, 88 66 C 83 64, 77 64, 68 68 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 70 68 Q 78 76 86 66" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Row 4: Mid-Upper Scales -->
+  <path d="M 34 52 C 38 64, 50 66, 53 54 C 45 50, 39 50, 34 52 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 36 52 Q 44 61 51 54" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <path d="M 53 54 C 57 67, 63 67, 67 54 C 61 51, 58 51, 53 54 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 55 54 Q 60 62 65 54" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <path d="M 67 54 C 70 66, 82 64, 86 52 C 81 50, 75 50, 67 54 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 69 54 Q 76 61 84 52" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Row 5: Upper Scales -->
+  <path d="M 39 39 C 43 50, 53 51, 56 41 C 49 37, 44 37, 39 39 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 41 39 Q 48 47 54 41" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <path d="M 64 41 C 67 51, 77 50, 81 39 C 76 37, 71 37, 64 41 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 66 41 Q 72 47 79 39" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Crown Tip Scale -->
+  <path d="M 52 30 C 58 23, 62 23, 68 30 C 63 36, 57 36, 52 30 Z" fill="url(#scaleGrad)" stroke="#1a0a03" stroke-width="2" />
+  <path d="M 54 30 Q 60 25 66 30" fill="none" stroke="url(#scaleTipGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Specular Sun Highlights -->
+  <path d="M 42 42 C 38 52, 38 65, 42 72 C 39 63, 39 52, 43 44 Z" fill="#ffffff" opacity="0.3" />
+  <ellipse cx="48" cy="36" rx="3" ry="5" fill="#ffffff" opacity="0.5" transform="rotate(-15 48 36)" />
+</svg>

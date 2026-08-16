@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Termite Relay — Level 1</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <main>
+    <canvas
+      id="game"
+      width="1920"
+      height="1080"
+      tabindex="0"
+      aria-label="Termite Relay Level 1 game. Use the keyboard to enter a player name, then use A and D or arrow keys to move. Hold W or Up for a higher jump."
+    ></canvas>
+    <p id="game-status" class="sr-only" aria-live="polite"></p>
+    <!-- Shown only on touch devices (and hidden during play). Requests
+         fullscreen so the game fills the screen and the bottom touch controls
+         are reachable. -->
+    <button id="fullscreen-btn" type="button" aria-label="Toggle fullscreen">⛶</button>
+    <!-- Overlays the canvas-drawn name box on the welcome screen. On touch
+         devices tapping the box focuses this input to summon the soft
+         keyboard; its value mirrors into the canvas-drawn name. Kept visually
+         transparent so the canvas remains the single source of visuals. -->
+    <input
+      id="name-input"
+      type="text"
+      maxlength="20"
+      autocomplete="off"
+      autocapitalize="words"
+      autocorrect="off"
+      spellcheck="false"
+      aria-label="Enter your player name"
+    />
+  </main>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

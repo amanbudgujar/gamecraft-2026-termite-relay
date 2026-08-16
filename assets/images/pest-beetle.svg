@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="shellGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#b84d57" />
+      <stop offset="60%" stop-color="#7a2129" />
+      <stop offset="100%" stop-color="#3b080c" />
+    </radialGradient>
+
+    <linearGradient id="armorHead" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e66e78" />
+      <stop offset="50%" stop-color="#9e343d" />
+      <stop offset="100%" stop-color="#4a0f14" />
+    </linearGradient>
+
+    <filter id="eyeGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#ff2600" />
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="60" cy="104" rx="40" ry="8" fill="#000000" opacity="0.35" />
+
+  <!-- Spiky Segmented Legs -->
+  <path d="M 32 68 L 12 76 L 4 92 M 28 80 L 14 94 L 8 108" fill="none" stroke="#1c0608" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 88 68 L 108 76 L 116 92 M 92 80 L 106 94 L 112 108" fill="none" stroke="#1c0608" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Main Carapace / Elytra (Shell) -->
+  <path d="M 20 62 C 20 38, 100 38, 100 62 C 100 92, 80 102, 60 102 C 40 102, 20 92, 20 62 Z" fill="url(#shellGrad)" stroke="#140204" stroke-width="3" />
+  
+  <!-- Shell Wing Split Line & Bolts -->
+  <line x1="60" y1="45" x2="60" y2="101" stroke="#140204" stroke-width="3" />
+  <circle cx="50" cy="65" r="3" fill="#4a0f14" />
+  <circle cx="70" cy="65" r="3" fill="#4a0f14" />
+  <circle cx="45" cy="82" r="3" fill="#4a0f14" />
+  <circle cx="75" cy="82" r="3" fill="#4a0f14" />
+
+  <!-- Shell Highlights -->
+  <path d="M 30 55 C 32 46, 45 44, 52 45 C 40 48, 32 55, 33 65 Z" fill="#ffffff" opacity="0.4" />
+  <path d="M 90 55 C 88 46, 75 44, 68 45 C 80 48, 88 55, 87 65 Z" fill="#ffffff" opacity="0.25" />
+
+  <!-- Heavy Armored Head Visor -->
+  <path d="M 32 46 C 32 26, 88 26, 88 46 C 88 50, 32 50, 32 46 Z" fill="url(#armorHead)" stroke="#140204" stroke-width="3" />
+  
+  <!-- Mandibles / Jaws -->
+  <path d="M 40 28 Q 32 12 24 18 Q 36 22 44 30 Z" fill="#2b080b" stroke="#140204" stroke-width="2" />
+  <path d="M 80 28 Q 88 12 96 18 Q 84 22 76 30 Z" fill="#2b080b" stroke="#140204" stroke-width="2" />
+
+  <!-- Glowing Menacing Eyes -->
+  <ellipse cx="44" cy="40" rx="6" ry="7" fill="#ff3b30" filter="url(#eyeGlow)" stroke="#140204" stroke-width="1.5" />
+  <circle cx="46" cy="39" r="2" fill="#ffff00" />
+  
+  <ellipse cx="76" cy="40" rx="6" ry="7" fill="#ff3b30" filter="url(#eyeGlow)" stroke="#140204" stroke-width="1.5" />
+  <circle cx="74" cy="39" r="2" fill="#ffff00" />
+
+  <!-- Brow Plate -->
+  <path d="M 36 34 L 52 38 L 68 38 L 84 34" fill="none" stroke="#140204" stroke-width="3.5" stroke-linecap="round" />
+</svg>

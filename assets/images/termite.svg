@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+  <defs>
+    <radialGradient id="bodyGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#a66a48" />
+      <stop offset="60%" stop-color="#6e3f27" />
+      <stop offset="100%" stop-color="#3d2012" />
+    </radialGradient>
+
+    <radialGradient id="headGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#d99b73" />
+      <stop offset="70%" stop-color="#a8623b" />
+      <stop offset="100%" stop-color="#5e3119" />
+    </radialGradient>
+
+    <linearGradient id="pouchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ec473" />
+      <stop offset="70%" stop-color="#47853c" />
+      <stop offset="100%" stop-color="#234a1c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Drop Shadow -->
+  <ellipse cx="68" cy="122" rx="42" ry="8" fill="#141a18" opacity="0.3" />
+
+  <!-- Back Legs -->
+  <path d="M 42 85 L 26 102 L 14 116 M 60 85 L 54 105 L 46 118" fill="none" stroke="#2b160c" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Abdomen (Rear Segments) -->
+  <ellipse cx="38" cy="80" rx="22" ry="28" fill="url(#bodyGrad)" stroke="#1a0b05" stroke-width="3" transform="rotate(20 38 80)" />
+  <path d="M 24 70 A 18 24 0 0 0 32 98" fill="none" stroke="#d99b73" stroke-width="2" opacity="0.4" />
+
+  <!-- Thorax (Mid Segment) -->
+  <ellipse cx="62" cy="82" rx="18" ry="22" fill="url(#bodyGrad)" stroke="#1a0b05" stroke-width="3" transform="rotate(-10 62 82)" />
+
+  <!-- Front/Mid Legs -->
+  <path d="M 75 85 L 88 102 L 100 118 M 52 88 L 38 106 L 32 120 M 68 88 L 66 108 L 68 122" fill="none" stroke="#4a2715" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Green Delivery Pouch Backpack -->
+  <rect x="74" y="52" width="28" height="38" rx="8" fill="url(#pouchGrad)" stroke="#12240e" stroke-width="3" transform="rotate(-15 88 71)" />
+  <path d="M 76 50 L 98 44" stroke="#8ede81" stroke-width="2" stroke-linecap="round" transform="rotate(-15 88 71)" />
+  <!-- Harness Straps -->
+  <path d="M 60 70 Q 72 65 78 78 M 65 85 Q 75 80 82 90" fill="none" stroke="#2b1a0e" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Head -->
+  <ellipse cx="50" cy="48" rx="22" ry="20" fill="url(#headGrad)" stroke="#1a0b05" stroke-width="3" />
+  <ellipse cx="44" cy="40" rx="10" ry="6" fill="#f0c2a5" opacity="0.3" transform="rotate(-15 44 40)" />
+
+  <!-- Eyes -->
+  <!-- Left Eye -->
+  <ellipse cx="40" cy="44" rx="8" ry="10" fill="#fff9ed" stroke="#1a0b05" stroke-width="2" />
+  <circle cx="41" cy="45" r="4" fill="#24140a" />
+  <circle cx="39" cy="42" r="1.5" fill="#ffffff" />
+  <!-- Right Eye -->
+  <ellipse cx="56" cy="44" rx="8" ry="10" fill="#fff9ed" stroke="#1a0b05" stroke-width="2" />
+  <circle cx="57" cy="45" r="4" fill="#24140a" />
+  <circle cx="55" cy="42" r="1.5" fill="#ffffff" />
+
+  <!-- Antennae with Segment Joints -->
+  <path d="M 38 30 C 28 16, 18 16, 10 20" fill="none" stroke="#2b160c" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M 54 30 C 66 14, 78 14, 88 18" fill="none" stroke="#2b160c" stroke-width="3.5" stroke-linecap="round" />
+  <!-- Joint Knobs -->
+  <circle cx="26" cy="20" r="2.5" fill="#8c4e2b" />
+  <circle cx="70" cy="19" r="2.5" fill="#8c4e2b" />
+</svg>

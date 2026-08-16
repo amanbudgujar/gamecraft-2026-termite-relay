@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <radialGradient id="shroomCap" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff758c" />
+      <stop offset="70%" stop-color="#a82848" />
+      <stop offset="100%" stop-color="#4a0a1c" />
+    </radialGradient>
+
+    <radialGradient id="sporeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#ff9ebb" />
+      <stop offset="100%" stop-color="#ff3b69" opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Giant Background Mushroom Cap 1 -->
+  <g opacity="0.85">
+    <path d="M 40 200 Q 55 140 60 110 L 75 110 Q 70 140 85 200 Z" fill="#2e1921" stroke="#14090d" stroke-width="2" />
+    <path d="M 25 115 C 25 65, 110 65, 110 115 Z" fill="url(#shroomCap)" stroke="#14090d" stroke-width="2.5" />
+    <ellipse cx="50" cy="90" rx="6" ry="10" fill="#ffccd5" opacity="0.6" transform="rotate(20 50 90)" />
+    <ellipse cx="85" cy="85" rx="8" ry="12" fill="#ffccd5" opacity="0.6" transform="rotate(-15 85 85)" />
+  </g>
+
+  <!-- Fern Leaves Silhouette Left -->
+  <path d="M -10 200 Q 30 160 70 150 M 15 185 Q 45 170 60 172 M 0 170 Q 35 150 48 152" fill="none" stroke="#1f3b25" stroke-width="5" stroke-linecap="round" opacity="0.9" />
+
+  <!-- Giant Background Mushroom Cap 2 (Right) -->
+  <g opacity="0.75">
+    <path d="M 320 200 Q 330 150 335 130 L 348 130 Q 345 150 355 200 Z" fill="#2e1921" stroke="#14090d" stroke-width="2" />
+    <path d="M 305 135 C 305 90, 375 90, 375 135 Z" fill="url(#shroomCap)" stroke="#14090d" stroke-width="2.5" />
+  </g>
+
+  <!-- Floating Glowing Spore Particles -->
+  <circle cx="120" cy="60" r="8" fill="url(#sporeGlow)" opacity="0.9" />
+  <circle cx="240" cy="90" r="12" fill="url(#sporeGlow)" opacity="0.7" />
+  <circle cx="180" cy="140" r="6" fill="url(#sporeGlow)" opacity="0.85" />
+  <circle cx="290" cy="40" r="10" fill="url(#sporeGlow)" opacity="0.6" />
+  <circle cx="40" cy="40" r="7" fill="url(#sporeGlow)" opacity="0.8" />
+</svg>

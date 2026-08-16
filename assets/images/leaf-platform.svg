@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 85" width="260" height="85">
+  <defs>
+    <!-- Top Landing Edge Rim Lighting -->
+    <linearGradient id="topEdgeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b4ff80" />
+      <stop offset="50%" stop-color="#e2ffb3" />
+      <stop offset="100%" stop-color="#8ce05a" />
+    </linearGradient>
+
+    <!-- Deep Organic Body Gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5bbd3a" />
+      <stop offset="30%" stop-color="#348e21" />
+      <stop offset="70%" stop-color="#1e5e11" />
+      <stop offset="100%" stop-color="#0e3108" />
+    </linearGradient>
+
+    <!-- Translucent Specular Overlay -->
+    <linearGradient id="leafHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80e854" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#3fa630" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Central Spine / Stem Gradient -->
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2c5e1b" />
+      <stop offset="30%" stop-color="#93f069" />
+      <stop offset="80%" stop-color="#55b035" />
+      <stop offset="100%" stop-color="#245217" />
+    </linearGradient>
+
+    <!-- Dew Drop Refraction Shader -->
+    <radialGradient id="dewGrad" cx="30%" cy="25%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#c1f3ff" />
+      <stop offset="70%" stop-color="#38a3cf" />
+      <stop offset="100%" stop-color="#13526d" />
+    </radialGradient>
+
+    <!-- Soft Under-Platform Drop Shadow Filter -->
+    <filter id="leafShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#051204" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Ground Shadow -->
+  <path d="M 18 32 Q 130 78 245 34 Q 130 90 18 32 Z" fill="#040d03" opacity="0.4" />
+
+  <!-- Curly Attachment Stem at Base -->
+  <path d="M -8 40 C 8 36, 18 48, 28 42 C 34 38, 22 30, 8 32 C -2 33, -8 38, -8 40 Z" fill="#2d661c" stroke="#0a1a06" stroke-width="2" />
+  <path d="M -8 40 C 10 37, 20 46, 32 40" fill="none" stroke="#66cb40" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Main Leaf Body -->
+  <path d="M 12 30 
+           C 45 22, 100 20, 160 21 
+           C 200 22, 232 26, 252 34 
+           C 238 48, 200 68, 140 72 
+           C 80 76, 38 62, 12 30 Z" 
+        fill="url(#leafGrad)" stroke="#0a1a06" stroke-width="3" stroke-linejoin="round" filter="url(#leafShadow)" />
+
+  <!-- Translucent Light Surface Overlay -->
+  <path d="M 15 31 C 50 24, 105 22, 160 23 C 198 24, 228 28, 246 34 C 210 42, 140 44, 15 31 Z" fill="url(#leafHighlight)" />
+
+  <!-- Under-Belly Depth Contour -->
+  <path d="M 28 42 C 75 62, 145 65, 235 42 C 180 62, 100 62, 28 42 Z" fill="#071705" opacity="0.6" />
+
+  <!-- Central Spine / Main Vein -->
+  <path d="M 8 34 C 60 36, 130 38, 246 35" fill="none" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Upper Lateral Veins -->
+  <path d="M 45 32 Q 58 25 72 24" fill="none" stroke="#a2f57a" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+  <path d="M 90 33 Q 106 24 124 23" fill="none" stroke="#a2f57a" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+  <path d="M 140 34 Q 158 25 178 24" fill="none" stroke="#a2f57a" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+  <path d="M 190 35 Q 206 28 222 28" fill="none" stroke="#a2f57a" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+
+  <!-- Lower Lateral Veins -->
+  <path d="M 50 36 Q 66 48 82 54" fill="none" stroke="#266917" stroke-width="2.2" stroke-linecap="round" opacity="0.8" />
+  <path d="M 100 37 Q 120 52 140 58" fill="none" stroke="#266917" stroke-width="2.2" stroke-linecap="round" opacity="0.8" />
+  <path d="M 150 37 Q 170 50 190 54" fill="none" stroke="#266917" stroke-width="2.2" stroke-linecap="round" opacity="0.8" />
+  <path d="M 198 36 Q 212 46 226 48" fill="none" stroke="#266917" stroke-width="1.8" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Top Flat Landing Collision Line (Vibrant Edge Highlight) -->
+  <path d="M 14 29 C 50 21, 105 19, 160 20 C 198 21, 230 25, 250 33" 
+        fill="none" stroke="url(#topEdgeGlow)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Edge Cutouts for Natural Leaf Texture -->
+  <path d="M 112 20 C 114 24, 118 24, 120 20 Z" fill="#0e3108" opacity="0.9" />
+  <path d="M 182 22 C 185 26, 189 26, 191 22 Z" fill="#0e3108" opacity="0.9" />
+
+  <!-- Water Dew Drops -->
+  <g>
+    <ellipse cx="82" cy="22" rx="6" ry="4" fill="url(#dewGrad)" stroke="#114254" stroke-width="0.8" />
+    <ellipse cx="80" cy="20" rx="2" ry="1" fill="#ffffff" opacity="0.9" />
+    <ellipse cx="155" cy="22" rx="5" ry="3.2" fill="url(#dewGrad)" stroke="#114254" stroke-width="0.8" />
+    <ellipse cx="153.5" cy="20.5" rx="1.8" ry="0.9" fill="#ffffff" opacity="0.9" />
+    <circle cx="225" cy="27" r="3" fill="url(#dewGrad)" stroke="#114254" stroke-width="0.6" />
+    <circle cx="224" cy="26" r="1" fill="#ffffff" opacity="0.9" />
+  </g>
+</svg>

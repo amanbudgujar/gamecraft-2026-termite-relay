@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1c29" />
+      <stop offset="50%" stop-color="#2a213d" />
+      <stop offset="100%" stop-color="#4a2b48" />
+    </linearGradient>
+
+    <linearGradient id="farPeaks" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a385c" />
+      <stop offset="100%" stop-color="#2d1833" />
+    </linearGradient>
+
+    <linearGradient id="nearPeaks" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d2247" />
+      <stop offset="100%" stop-color="#1b0e21" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="400" height="200" fill="url(#skyGrad)" />
+
+  <!-- Background Glow Sun / Bioluminescent Hub -->
+  <circle cx="200" cy="110" r="70" fill="#ff7b6e" opacity="0.18" filter="blur(20px)" />
+
+  <!-- Far Mountain Silhouettes -->
+  <path d="M 0 200 L 0 120 L 35 90 L 80 130 L 130 75 L 180 115 L 240 60 L 300 125 L 350 85 L 400 130 L 400 200 Z" fill="url(#farPeaks)" opacity="0.7" />
+
+  <!-- Near Ridge Silhouettes with Stalagmite Peaks -->
+  <path d="M 0 200 L 0 145 L 50 110 L 95 150 L 150 95 L 210 140 L 270 90 L 330 140 L 380 105 L 400 125 L 400 200 Z" fill="url(#nearPeaks)" />
+  <path d="M 0 145 L 50 110 L 95 150 L 150 95 L 210 140 L 270 90 L 330 140 L 380 105 L 400 125" fill="none" stroke="#7a4b7d" stroke-width="1.5" opacity="0.5" />
+</svg>

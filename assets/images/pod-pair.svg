@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 140" width="170" height="140">
+  <defs>
+    <!-- Multi-stage ambient glow from original design -->
+    <filter id="podGlowHigh" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <radialGradient id="podCoreGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffb3ba" />
+      <stop offset="25%" stop-color="#ff4d6d" />
+      <stop offset="70%" stop-color="#c9182b" />
+      <stop offset="100%" stop-color="#600510" />
+    </radialGradient>
+
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a5230" />
+      <stop offset="50%" stop-color="#4a3018" />
+      <stop offset="100%" stop-color="#231408" />
+    </linearGradient>
+
+    <!-- Reusable Pod Body constructed using exact original geometry -->
+    <g id="seedPod">
+      <!-- Outer Glow Aura -->
+      <ellipse cx="60" cy="65" rx="34" ry="42" fill="#ff2e55" opacity="0.45" filter="url(#podGlowHigh)" transform="rotate(12 60 65)" />
+      
+      <!-- Main Body -->
+      <ellipse cx="60" cy="65" rx="26" ry="38" fill="url(#podCoreGrad)" stroke="#1a0407" stroke-width="3" transform="rotate(12 60 65)" />
+
+      <!-- Surface Texture Ribs -->
+      <path d="M 44 40 C 36 55, 38 75, 48 95" fill="none" stroke="#8a0f1e" stroke-width="2" opacity="0.6" stroke-linecap="round" />
+      <path d="M 58 30 C 52 50, 54 78, 66 100" fill="none" stroke="#8a0f1e" stroke-width="2" opacity="0.6" stroke-linecap="round" />
+      <path d="M 72 35 C 68 52, 72 72, 76 88" fill="none" stroke="#ff8597" stroke-width="1.5" opacity="0.4" stroke-linecap="round" />
+
+      <!-- Primary Specular Highlight -->
+      <path d="M 48 42 C 44 50, 45 64, 50 72 C 47 62, 47 50, 51 44 Z" fill="#ffffff" opacity="0.85" />
+      <ellipse cx="50" cy="40" rx="4" ry="7" fill="#ffffff" opacity="0.9" transform="rotate(12 50 40)" />
+      
+      <!-- Secondary Rim Reflection -->
+      <path d="M 78 60 C 80 72, 76 82, 70 90" fill="none" stroke="#ffccd5" stroke-width="2" opacity="0.7" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <!-- Joined Cherry Stems -->
+  <!-- Dark Outline Underlay for Stems -->
+  <path d="M 50 44 C 48 26, 65 18, 85 12" fill="none" stroke="#171b20" stroke-width="7" stroke-linecap="round" />
+  <path d="M 120 49 C 122 28, 105 18, 85 12" fill="none" stroke="#171b20" stroke-width="7" stroke-linecap="round" />
+  <path d="M 85 12 Q 83 6 86 2" fill="none" stroke="#171b20" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Main Colored Stems -->
+  <path d="M 50 44 C 48 26, 65 18, 85 12" fill="none" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round" />
+  <path d="M 120 49 C 122 28, 105 18, 85 12" fill="none" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round" />
+  <path d="M 85 12 Q 83 6 86 2" fill="none" stroke="url(#stemGrad)" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Stem Highlight Lines -->
+  <path d="M 51 40 C 50 28, 64 20, 83 14" fill="none" stroke="#a87c53" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 118 45 C 119 30, 104 20, 87 14" fill="none" stroke="#a87c53" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Left Seed Pod -->
+  <use href="#seedPod" transform="translate(-10, 15) rotate(-8 60 65)" />
+
+  <!-- Right Seed Pod -->
+  <use href="#seedPod" transform="translate(60, 20) rotate(16 60 65)" />
+</svg>
